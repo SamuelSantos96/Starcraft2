@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convergence Points – Terran (LotV)</title>
+<style>
+  :root {
+    --bg: #0e1116; --panel: #161b22; --border: #2a313c; --text: #e6edf3;
+    --muted: #9aa5b1; --accent: #4fa3ff; --accent2: #f0b429; --good: #3fb950;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+  }
+  main { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); margin: 0 0 32px; }
+  h2 {
+    font-size: 1.3rem; margin: 40px 0 12px; padding-bottom: 6px;
+    border-bottom: 1px solid var(--border); color: var(--accent);
+  }
+  h3 { font-size: 1.05rem; margin: 20px 0 6px; color: var(--accent2); }
+  p, li { color: var(--text); }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 20px; margin: 14px 0;
+  }
+  .highlight { border-left: 4px solid var(--accent2); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .95rem; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--panel); color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: .78rem; letter-spacing: .04em; }
+  code, .prod {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: #1f2630; padding: 1px 6px; border-radius: 4px; color: var(--good);
+  }
+  .tag { display: inline-block; font-size: .75rem; padding: 2px 8px; border-radius: 999px; background: #1f2630; color: var(--muted); margin-left: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .note { color: var(--muted); font-size: .9rem; }
+  footer { margin-top: 48px; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--border); padding-top: 16px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Convergence Points – Terran</h1>
+  <p class="subtitle">StarCraft II: Legacy of the Void · resumo do artigo da TerranCraft</p>
+
+  <h2>O que são</h2>
+  <p>Valores de referência que indicam <strong>quantos edifícios de produção</strong> (Barracks‑Factory‑Starport) deves ter <strong>para cada número de bases a minerar</strong>, de forma a gastar os recursos sem desperdício.</p>
+  <ul>
+    <li>Builds diferentes acabam por <strong>convergir para o mesmo setup</strong> de produção.</li>
+    <li>Servem para avaliar a build: produção a mais significa edifícios parados; produção a menos significa recursos acumulados.</li>
+    <li>Partem do princípio de que <strong>todos os edifícios produzem sem parar</strong>, incluindo os Command Centers.</li>
+    <li>Só se aplicam ao <strong>Terran</strong>, por causa da produção linear. O Zerg não tem convergence point (não acrescenta produção com as bases). O Protoss é mencionado, mas não é analisado.</li>
+  </ul>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Unsaturated</h3>
+      <p>Sobram minerais, por isso tens dinheiro para <strong>expandir</strong>.</p>
+    </div>
+    <div class="card">
+      <h3>Saturated</h3>
+      <p>Gastas tudo e <strong>não consegues pagar</strong> outro Command Center.</p>
+    </div>
+  </div>
+
+  <h2>Os pontos</h2>
+  <table>
+    <thead>
+      <tr><th>Bases</th><th>Tipo</th><th>Produção (Rax‑Fact‑Port)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Unsaturated</td><td>Qualquer build que tire expansão</td></tr>
+      <tr><td>1</td><td>Saturated</td><td>Proxy de 4 Barracks (o caso mais extremo)</td></tr>
+      <tr><td>2</td><td>Unsaturated</td><td>Base 1‑1‑1 + 2 edifícios da composição principal: bio <span class="prod">3‑1‑1</span>, mech <span class="prod">1‑3‑1</span>, air <span class="prod">1‑1‑3</span></td></tr>
+      <tr><td>2</td><td>Saturated</td><td>Bio <span class="prod">5‑1‑1</span>. Mech/air: só mais um edifício da composição principal (hipotético)</td></tr>
+      <tr><td>3 (fase 1)</td><td>Standard</td><td>Bio <span class="prod">5‑1‑1</span>, mech <span class="prod">1‑5‑1</span>, air <span class="prod">1‑1‑5</span></td></tr>
+      <tr><td>3 (fase 2)</td><td>Ajustado</td><td>Depende do plano: <span class="prod">5‑2‑1</span> (tanks), <span class="prod">5‑1‑2</span> (Liberators/Medivacs), <span class="prod">7‑3‑1</span>, <span class="prod">8‑2‑1</span>, ou mais Starports para air</td></tr>
+    </tbody>
+  </table>
+
+  <h3>1 base</h3>
+  <p>Não é um convergence point verdadeiro, porque ninguém "converge" para uma base. São exemplos próximos da saturação: o 3‑Rax Reaper e algumas variantes de 1‑1‑1 com o CC muito atrasado.</p>
+
+  <div class="card highlight">
+    <h3>2 bases: o ponto mais importante <span class="tag">3‑1‑1</span></h3>
+    <p>É para aqui que a maioria das builds converge, e é este ponto que <strong>marca o fim da build order</strong>.</p>
+  </div>
+
+  <h3>3 bases <span class="tag">5‑1‑1</span></h3>
+  <p>O checkpoint principal das três bases. Depois dele tens flexibilidade (fase 2), com ajustes específicos do matchup e dos mirrors.</p>
+
+  <div class="card">
+    <strong>Regra geral:</strong> não mais de <strong>12 edifícios de produção</strong> no total, assumindo que produzem todos ao mesmo tempo.
+  </div>
+
+  <h2>O que esperar por matchup</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>TvT</h3>
+      <p>Conta com uma segunda Factory para tanks: <span class="prod">5‑2‑1</span>. Uma Barracks com Tech Lab fica para Stim e Combat Shield, e as restantes levam Reactors.</p>
+    </div>
+    <div class="card">
+      <h3>TvP</h3>
+      <p>O <span class="prod">2‑1‑1</span> é comum, e com uma terceira Barracks chegas ao <span class="prod">3‑1‑1</span>. Com Liberators e Medivacs vais para <span class="prod">5‑1‑2</span> e depois em direção a <span class="prod">8‑1‑2</span>. No 5‑1‑1: 3 Tech Labs e 2 Reactors.</p>
+    </div>
+    <div class="card">
+      <h3>TvZ</h3>
+      <p>Reaper expand padrão para uma variante de 1‑1‑1, com o terceiro CC cedo. No <span class="prod">5‑1‑1</span>: 1 Tech Lab e 4 Reactors.</p>
+    </div>
+    <div class="card">
+      <h3>Mech / Air</h3>
+      <p>Mech: <span class="prod">1‑3‑1</span> e depois <span class="prod">1‑5‑1</span>. Air: <span class="prod">1‑1‑3</span> e depois <span class="prod">1‑1‑5</span>, com mais Starports à medida que o jogo avança.</p>
+    </div>
+  </div>
+
+  <h2>O que verificar no jogo</h2>
+  <ul>
+    <li><strong>Produção vs bases:</strong> compara o número de Rax/Fact/Port com a referência para as bases que tens a minerar.</li>
+    <li><strong>Recursos:</strong> minerais a sobrar significam que podes adicionar produção ou expandir. Edifícios parados significam produção a mais.</li>
+    <li><strong>Engineering Bays:</strong> 2 num jogo macro unsaturated, ou 1 se fores ficar em duas bases.</li>
+    <li><strong>Add‑ons:</strong> pouco efeito no convergence point, exceto quando tens Factories extra.</li>
+    <li><strong>Late game (LotV):</strong> a main pode esgotar-se quando a terceira ainda está a começar. Por isso podes ficar mais tempo em 5‑1‑1, 5‑2‑1 ou 5‑1‑2 antes das 11–12 estruturas.</li>
+  </ul>
+
+  <p class="note">O artigo não dá timings concretos para cada ponto. O único tempo referido é os 10:00, como exemplo de altura em que normalmente já há pelo menos três bases a minerar. O artigo é de 2016 (início do LotV): os números de referência continuam úteis, mas as composições e timings atuais podem ser diferentes.</p>
+
+  <footer>
+    Fonte: <a href="https://terrancraft.com/2016/04/23/revisiting-convergent-points-lotv/" target="_blank" rel="noopener">Revisiting Convergent Points (LotV) – TerranCraft</a>
+  </footer>
+</main>
+</body>
+</html>

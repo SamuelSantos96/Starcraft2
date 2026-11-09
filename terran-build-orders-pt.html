@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Orders Terran – TvT, TvP, TvZ</title>
+<style>
+  :root {
+    --bg: #0e1116; --panel: #161b22; --border: #2a313c; --text: #e6edf3;
+    --muted: #9aa5b1; --accent: #4fa3ff; --accent2: #f0b429; --good: #3fb950; --warn: #f85149;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  main { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); margin: 0 0 28px; }
+  h2 { font-size: 1.3rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); color: var(--accent); }
+  h3 { font-size: 1.05rem; margin: 0 0 6px; color: var(--accent2); }
+  ul { padding-left: 22px; margin: 6px 0; }
+  li { margin: 4px 0; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin: 14px 0; }
+  .highlight { border-left: 4px solid var(--accent2); }
+  .warn { border-left: 4px solid var(--warn); }
+  .prod { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #1f2630; padding: 1px 6px; border-radius: 4px; color: var(--good); }
+  .tag { display: inline-block; font-size: .72rem; padding: 2px 8px; border-radius: 999px; background: #1f2630; color: var(--muted); margin-left: 6px; vertical-align: middle; }
+  .flow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--good); font-size: 1.05rem; }
+  .note { color: var(--muted); font-size: .9rem; }
+  footer { margin-top: 48px; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--border); padding-top: 16px; }
+  footer ul { padding-left: 18px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Build Orders Terran mais comuns</h1>
+  <p class="subtitle">StarCraft II · TvT, TvP e TvZ · novembro 2026</p>
+
+  <div class="card highlight">
+    <h3>Base comum aos três matchups</h3>
+    <p class="flow">Reaper Fast Expand → 1‑1‑1</p>
+    <p>A partir daqui, cada matchup segue o seu caminho.</p>
+  </div>
+
+  <h2>TvT</h2>
+  <div class="card">
+    <h3>Reaper/Hellion → Marine‑Tank (‑Raven) <span class="tag">standard</span></h3>
+    <p>A abertura mais sólida e comum, com transição para Marine‑Tank e Raven.</p>
+  </div>
+  <div class="card">
+    <h3>Cyclone opening <span class="tag">mech ou bio</span></h3>
+    <p>Continua a ver-se em replays de 2026, por exemplo em mech TvT.</p>
+  </div>
+  <div class="card">
+    <h3>Alternativas agressivas</h3>
+    <ul>
+      <li>1‑1‑1 com Banshee</li>
+      <li>Tank push</li>
+      <li>Proxy Reaper (menos comum)</li>
+    </ul>
+  </div>
+  <p class="note">Convergence point: conta com a 2.ª Factory para tanks, <span class="prod">5‑2‑1</span>.</p>
+
+  <h2>TvP</h2>
+  <div class="card">
+    <h3>Reaper FE → bio <span class="tag">standard</span></h3>
+    <ul>
+      <li>O Reaper procura proxies.</li>
+      <li>O SCV que faz o 2.º depot faz o Bunker.</li>
+      <li>Factory depois do Orbital; 2.º gas depois do Bunker.</li>
+      <li>Scout com Reaper + Hellion.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>2‑1‑1 Marine‑Medivac timing <span class="tag">pressão</span></h3>
+    <p>Clássico de pressão cedo: 2 Medivacs com 15–16 Marines saem pelo mapa por volta das <strong>4:45</strong>, com transição para tank push.</p>
+  </div>
+  <div class="card">
+    <h3>Outras opções</h3>
+    <ul>
+      <li>Cloak Banshee → all‑in de 2 bases com 5 Barracks</li>
+      <li>2 Rax + Marauders (pressão contra fast expand)</li>
+    </ul>
+  </div>
+
+  <h2>TvZ</h2>
+  <div class="card">
+    <h3>Reaper FE → Reactor Hellions → 1‑1‑1 → 4M <span class="tag">standard</span></h3>
+    <p>4M = Marine, Marauder, Medivac, Mine. É o estilo standard do matchup.</p>
+  </div>
+  <div class="card">
+    <h3>Hellion‑Banshee <span class="tag">HeroMarine 2026</span></h3>
+    <ul>
+      <li>Reaper FE básica.</li>
+      <li>O Reaper faz scout da 3.ª base e volta por volta das <strong>3:20</strong>.</li>
+      <li>Saída com 2 Hellions + Reaper.</li>
+      <li>Depois: mais CCs, 2.ª Factory para tanks, upgrades, Fusion Core, Ghosts.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Variantes</h3>
+    <ul>
+      <li>Reactor Hellion + Battlecruiser (BC quando o Fusion Core fica pronto)</li>
+      <li>Mech</li>
+      <li>Fast 3 CC (uThermal)</li>
+    </ul>
+  </div>
+  <div class="card warn">
+    <h3>Se vires Roaches cedo</h3>
+    <p>Corta Hellions/Marines, foca-te em Mines/Marauders e junta mais 1–2 Bunkers.</p>
+  </div>
+
+  <h2>Atenção ao patch</h2>
+  <div class="card warn">
+    <p>O <strong>5.0.16</strong> (junho 2026) reduziu os workers iniciais de 12 para 8. O <strong>5.0.17</strong> (7 de outubro de 2026) repôs os 12. Os guias publicados no verão podem ter timings feitos para 8 workers, por isso confirma a versão do patch antes de copiares os supply counts.</p>
+  </div>
+  <p class="note">Para treinar: as séries de guias do HeroMarine de 2026 no Spawning Tool dão uma build sólida por matchup, com VOD e replay.</p>
+
+  <footer>
+    Fontes:
+    <ul>
+      <li><a href="https://lotv.spawningtool.com/build/202941/" target="_blank" rel="noopener">HeroMarine TvP guide 2026 – Spawning Tool</a></li>
+      <li><a href="https://lotv.spawningtool.com/build/202885/" target="_blank" rel="noopener">HeroMarine TvZ Hellion Banshee 2026 – Spawning Tool</a></li>
+      <li><a href="https://lotv.spawningtool.com/build/171779" target="_blank" rel="noopener">Standard TvT Build Order Template – Spawning Tool</a></li>
+      <li><a href="https://lotv.spawningtool.com/89888" target="_blank" rel="noopener">Mech TvT Cyclone Opening replay – Spawning Tool</a></li>
+      <li><a href="https://www.liquipedia.net/starcraft2/4M_(vs._Zerg)" target="_blank" rel="noopener">4M (vs. Zerg) – Liquipedia</a></li>
+      <li><a href="https://lotv.spawningtool.com/build/110345/" target="_blank" rel="noopener">Reactor Hellion + BC TvZ – Spawning Tool</a></li>
+      <li><a href="https://www.icy-veins.com/sc2/tvp-build-order-2-1-1-marine-medivac-timing-into-tank-push-terran-vs-protoss" target="_blank" rel="noopener">TvP 2‑1‑1 Marine‑Medivac – Icy Veins</a></li>
+      <li><a href="https://guildorder.com/pl/games/sc2/guides/adapting-to-a-major-balance-patch" target="_blank" rel="noopener">Adapting to a major balance patch – Guild Order</a></li>
+    </ul>
+  </footer>
+</main>
+</body>
+</html>
